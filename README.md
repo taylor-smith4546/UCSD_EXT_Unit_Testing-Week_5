@@ -21,7 +21,6 @@ Signature of reverse method:
 public String reverse(String s) { ... }
 ```
 
-
 ## Topics Covered: 
 
 o	What values to check?
