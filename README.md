@@ -21,6 +21,28 @@ Signature of reverse method:
 public String reverse(String s) { ... }
 ```
 
+Exercise #2:
+
+Design Test Cases: Interactions Testing
+
+UserServiceImpl class contains the assignPassword() method, as presented on Listing 7.36. The
+method uses two collaborators to successfully perform its task: userDAO and securityService.
+
+assignPassword() Method
+```java
+private UserDAO userDAO;
+private SecurityService securityService;
+public void assignPassword(User user) throws Exception {
+ String passwordMd5 = securityService.md5(user.getPassword());
+ user.setPassword(passwordMd5);
+ userDAO.updateUser(user);
+}
+```
+
+Design the test cases for this method! Please note that this time you will have to think not only
+about the input parameters (user), but also about the values returned (or exceptions thrown!) by
+securityService and userDAO.
+
 ## Topics Covered: 
 
 o	What values to check?
